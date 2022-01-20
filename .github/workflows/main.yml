@@ -24,16 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Setup env
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - uses: actions/setup-python@v2
-      - with:
+        with:
           python-version: '3.9'
           cache: 'pip'
       - run: pip install -r requirements.txt
       
       - name: Download test file
-      - uses: carlosperate/download-file-action@v1
-      - with:
+        uses: carlosperate/download-file-action@v1
+        with:
            file-url: 'https://github.com/tangowithcode/tango_with_django_2_code/raw/master/progress_tests/tests_chapter3.py'
       - name: Run tests
-      - run:  python manage.py test rango.tests_chapter3
+        run:  python manage.py test rango.tests_chapter3
