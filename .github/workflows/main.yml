@@ -34,7 +34,7 @@ jobs:
       - name: Download test file
         uses: carlosperate/download-file-action@v1
         with:
-           file-url: 'https://github.com/tangowithcode/tango_with_django_2_code/raw/master/progress_tests/tests_chapter3.py'
+           file-url: 'https://github.com/tangowithcode/tango_with_django_2_code/raw/master/progress_tests/tests_chapter10.py'
            location: './rango'
       - name: Run tests
-        run:  python manage.py test rango.tests_chapter3
+        run:  python manage.py test rango.tests_chapter10
