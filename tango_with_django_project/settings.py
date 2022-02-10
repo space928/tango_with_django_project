@@ -73,6 +73,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
